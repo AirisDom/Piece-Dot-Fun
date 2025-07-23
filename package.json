@@ -42,6 +42,7 @@
     "sass": "^1.62.0",
     "semantic-ui-css": "^2.5.0",
     "semantic-ui-react": "^2.1.4",
+    "sqlite3": "^5.1.7",
     "stripe": "^11.10.0",
     "yup": "^1.1.1"
   }
