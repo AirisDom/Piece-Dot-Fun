@@ -1,0 +1,137 @@
+@import "@/scss/colors.scss";
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+.productsView_wrapper {
+  //padding: 0 200px;
+  width: 100%;
+  margin-top: 3%;
+  object-fit: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 25px;
+  column-gap: 35px;
+}
+@media (max-width: 1700px) {
+  .productsView_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1400px) {
+  .productsView_wrapper {
+    grid-template-columns: 1fr;
+    width: 70%;
+  }
+}
+.title_p{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Pacifico', cursive;
+}
+.productsView_main {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  border: solid 1px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 40px 30px;
+}
+
+.productsView_img {
+  background-color: #0a0f1c;
+}
+
+.productsView_img_containter {
+  position: relative;
+  width: 50%;
+  padding-bottom: 20%;
+  padding-top: 50%;
+  margin: 0 auto;
+}
+
+.productsView_img_containter img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  transition: transform .2s;
+  &:hover {
+    transform: scale(
+      1.5
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
+.productsView_title_and_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+
+  .productsView_title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .productsView_info {
+    font-size: 16px;
+    color: #666;
+  }
+}
+
+.productsView_price_and_actions {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.productsView_price {
+  display: flex;
+  flex-direction: column;
+}
+
+.product_price {
+  font-size: 18px;
+
+  color: #999;
+  text-decoration: line-through;
+}
+
+.product_price_off {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.productsView_actions {
+  
+  div {
+    //background-color: #5819dfef;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+
+    &:hover {
+      background-color: #b82db8;
+    }
+  }
+}

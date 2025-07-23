@@ -1,0 +1,77 @@
+@import "../scss/colors.scss";
+
+.marketsPage_wrapper {
+  width: 100%;
+  margin-top: 3%;
+  object-fit: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 25px;
+}
+
+@media (max-width: 1400px) {
+  .marketsPage_wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1100px) {
+  .marketsPage_wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mapsMaker_wrapper {
+  background-color: rebeccapurple;
+}
+
+.viewMarkets_wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto !important;
+  text-align: center;
+  
+  h2{
+    margin-bottom: 10px;
+    color: #d1d1d1;
+  }
+}
+
+.viewMarkets_selector_wrapper {
+  select {
+    padding: 13px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    background-color: $main-color;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #d7d7d7;
+    //border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    //outline: 0;
+    text-emphasis-color: blue;
+
+    &:hover{
+      color: #ffffff;
+      cursor: pointer;
+      border-color: #ee00ff;
+    }
+  }
+}
+.viewMarkets_maps_wrapper{
+  margin-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  h3{
+    margin-bottom: 10px;
+    color: #bfbfbf;
+  }
+}

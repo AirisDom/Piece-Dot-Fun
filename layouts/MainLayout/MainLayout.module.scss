@@ -1,0 +1,27 @@
+@import "scss/colors.scss";
+
+.main_layout {
+  display: flex;
+  flex-direction: row;
+  max-height: 100vh;
+  background: $main-color;
+}
+
+.main {
+  margin-left: 50px;
+  width: 100%;
+}
+
+.main_content {
+  max-height: 100vh;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+  }
+  scrollbar-width: none;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}

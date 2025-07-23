@@ -1,0 +1,346 @@
+@import "../../../scss/colors.scss";
+
+.createMarket_wrapper {
+  margin-top: 0.5rem;
+}
+
+.createMarket_wrapper_form {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.createMarket_form {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  label {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border-width: 1px;
+  }
+
+  span {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: 300;
+    color: $main-color;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  input {
+    display: block;
+    padding: 13px;
+    border: 0;
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: 0;
+  }
+  select {
+    display: block;
+    padding: 13px;
+    border: 0;
+    margin-top: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: 0;
+    text-emphasis-color: blue;
+  }
+}
+
+.createMarket_form2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  label {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border-width: 1px;
+  }
+
+  span {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: 300;
+    color: $main-color;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  input {
+    display: block;
+    padding: 13px;
+    border: 0;
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: $main-color;
+    border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: 0;
+  }
+}
+.createMarket_button {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: flex-end;
+
+  button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 19px;
+    border-radius: 0.5rem;
+    border-width: 1px;
+    background-color: $solana_button_color;
+    &:hover {
+      background-color: #d716e5;
+      cursor: pointer;
+    }
+  }
+}
+
+.createShipping_wrapper {
+  margin-top: 0.5rem;
+}
+
+.createShipping_header {
+  display: flex;
+}
+
+.createShipping_wrapper_form {
+  //margin-top: 0.5rem;
+  display: flex;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+.createShipping_form {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  label {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border-width: 1px;
+  }
+
+  span {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: 300;
+    color: $main-color;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+
+    color: #d7d7d7;
+  }
+
+  input {
+    display: block;
+    padding: 13px;
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: $main-color;
+    border-radius: 10px;
+    border-color: #d7d7d7;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: 0;
+  }
+}
+
+.createShipping_form2 {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+
+  label {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    border-width: 1px;
+  }
+
+  span {
+    font-size: 1.3rem;
+    line-height: 1rem;
+    font-weight: 300;
+    color: $main-color;
+
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    color: #d7d7d7;
+  }
+
+  input {
+    display: block;
+    padding: 13px;
+
+    margin: auto;
+    margin-top: 0.5rem;
+    background-color: $main-color;
+    border-radius: 10px;
+    border-color: #fff;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: 0;
+  }
+}
+
+.map_container {
+  width: 50%;
+  //height: 500px;
+  //margin-top: 30px;
+}
+
+.createShipping_button {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  justify-content: flex-end;
+  width: 190px;
+
+  button {
+    display: flex;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    padding: 5px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    font-size: 21px;
+    border-radius: 0.5rem;
+    border-width: 5px;
+    border-color: #d7d7d7;
+    background-color: $solana_button_color;
+    &:hover {
+      background-color: #9700ef;
+      cursor: pointer;
+      border-color: #7b00be;
+    }
+  }
+  a {
+    margin: auto;
+  }
+}
+
+.App {
+  display: flex;
+  height: 100vh;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(#fdfcfb, #e2d1c3);
+  padding-top: 120px;
+  box-sizing: border-box;
+}
+
+.search {
+  position: relative;
+}
+
+.search span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search > * > svg {
+  display: block;
+}
+
+.search span {
+  left: 20px;
+  opacity: 0.5;
+  margin-top: 1px;
+}
+
+.search button {
+  right: 20px;
+  left: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  color: #00ff84;
+}
+
+.search button:hover {
+  color: #f48fb1;
+}
+
+.search input {
+  box-sizing: border-box;
+  display: block;
+  // width: 650px;
+  // height: 70px;
+  margin: 15px;
+  border-radius: 10px;
+  padding: 13px 215px;
+
+  font-size: 20px;
+  //outline: none;
+  border: 1px solid #d7d7d7;
+  background: $main-color;
+}
+
+.address {
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.address p {
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+.address p span {
+  opacity: 0.8;
+}

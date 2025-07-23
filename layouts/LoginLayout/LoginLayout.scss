@@ -1,0 +1,13 @@
+@import "scss/colors.scss";
+
+.main_layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background: $main-color;
+}
+
+.main {
+  margin-left: 50px;
+  width: 60%;
+}

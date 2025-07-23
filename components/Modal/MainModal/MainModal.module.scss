@@ -1,0 +1,79 @@
+@import "../../../scss/colors.scss";
+
+.mainModal_transition {
+  color: $nav-color;
+  position: relative;
+  z-index: 50;
+}
+
+.mainModal_wrapper {
+  overflow-y: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+}
+
+.mainModal_panel {
+  //overflow: hidden;
+  padding: 1.5rem;
+  display: block;
+  position: relative;
+  background-color: #290780;
+  opacity: 93%;
+  transition-property: all;
+  text-align: left;
+  vertical-align: middle;
+  width: 530px;
+  max-width: 28rem;
+  //height: 679px;
+  margin: auto;
+  margin-top: 180px;
+  border-radius: 1rem;
+  box-shadow: 10px 15px 25px -5px rgba(73, 0, 112, 0.948);
+  overflow: hidden;
+
+  hr {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    opacity: 0.5;
+  }
+}
+
+.mainModal_title {
+  color: $main-color;
+  font-size: 1.5rem;
+  font-weight: 1500;
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+.mainModal_panel_header {
+  display: flex;
+  //margin: auto;
+}
+
+.mainModal_panel_header_close {
+  color: #fff;
+  //margin: auto;
+  &:hover{
+    color: #f04aff;
+    cursor: pointer;
+  }
+}

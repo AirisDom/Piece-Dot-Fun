@@ -1,0 +1,58 @@
+@import "../../../scss/colors.scss";
+
+.myTxs_wrapper {
+  margin: auto;
+}
+
+.myTxs_selector {
+  text-align: center;
+  margin-bottom: 20px;
+  select {
+    padding: 13px;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    background-color: $main-color;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #d7d7d7;
+    text-align: center;
+    //border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    //outline: 0;
+    text-emphasis-color: blue;
+
+    &:hover {
+      color: #ffffff;
+      cursor: pointer;
+      border-color: #ee00ff;
+    }
+  }
+}
+
+.myTxs_info_wrapper{
+    border: solid 1px;
+    padding: 5px 5px;
+    margin-left: 18px;
+    margin-right: 18px;
+    //width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    background-color:  #b7b7b717;
+    p{
+        margin: 9px;
+    }
+}
+
+.myTxs_info{
+    border: solid 1px;
+    padding: 15px 15px;
+    margin: 20px;
+    background-color:  #b7b7b717;
+}
+// #0a0f1c;

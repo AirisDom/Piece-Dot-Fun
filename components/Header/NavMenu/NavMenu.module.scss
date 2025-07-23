@@ -1,0 +1,58 @@
+@import "scss/colors.scss";
+
+.header_menu {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+
+  ul {
+    margin-top: 20px !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.header_menu_item {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    //margin-top: 30px;
+    width: 100%;
+    padding: 20px 30px;
+    border-radius: 20px;
+    margin-top: 5px;
+
+    //size: 1.4em!important;
+    font-size: 1.5em !important;
+    color: $nav-color;
+    transition: background-color 0.5s ease-in-out;
+
+    .icon {
+      font-size: 1.5em;
+      color: $nav-color;
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    .text {
+      color: $nav-color;
+      width: 100%;
+    }
+
+    &:hover {
+      color: $nav-hover-color;
+      background-color: #423e63;
+      cursor: pointer;
+    }
+  }
+}
+
+.header_menu_item_icon {
+  margin-right: 30px !important;
+}

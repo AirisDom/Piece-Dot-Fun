@@ -1,0 +1,34 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.button {
+  display: flex;
+  margin: auto;
+  background-color: #8d8d8d;
+  color: rgb(0, 0, 0);
+  max-width: 400px;
+  padding: 20px 100px;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 0 10px;
+  font-size: 21px;
+  font-weight: 600;
+  a{
+    margin: auto;
+  }
+
+  &:disabled {
+    background-color: #512da8;
+    cursor: default;
+    color: white;
+  }
+  &:hover {
+    border-color: aliceblue;
+    background-color: #d716e5;
+    transition: 1.1s;
+    cursor: pointer;
+  }
+}

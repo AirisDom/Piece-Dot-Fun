@@ -1,0 +1,11 @@
+@import "scss/colors.scss";
+
+.topBar_wrapper {
+  padding: 50px 0;
+  color: $nav-color;
+
+  h2,
+  h3 {
+    margin: 0;
+  }
+}

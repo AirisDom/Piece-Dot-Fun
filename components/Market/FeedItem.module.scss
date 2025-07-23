@@ -1,0 +1,16 @@
+@import "@/scss/colors.scss";
+
+.feedItem_wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid $nav-color;
+  border-radius: 9px;
+
+  :hover{
+    cursor: pointer;
+    
+  }
+}

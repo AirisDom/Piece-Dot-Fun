@@ -1,0 +1,493 @@
+{
+  "version": "0.1.0",
+  "name": "smartcontract",
+  "instructions": [
+    {
+      "name": "createBalance",
+      "accounts": [
+        { "name": "balance", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "tp", "type": "string" },
+        { "name": "amount", "type": "string" },
+        { "name": "timestamp", "type": "string" },
+        { "name": "balanceId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createMarket",
+      "accounts": [
+        { "name": "market", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "marketName", "type": "string" },
+        { "name": "marketFocusesOn", "type": "string" },
+        { "name": "marketAvailable", "type": "string" },
+        { "name": "email", "type": "string" },
+        { "name": "street", "type": "string" },
+        { "name": "state", "type": "string" },
+        { "name": "colonia", "type": "string" },
+        { "name": "municipio", "type": "string" },
+        { "name": "zip", "type": "string" },
+        { "name": "numExt", "type": "string" },
+        { "name": "numInt", "type": "string" },
+        { "name": "numberPhone", "type": "string" },
+        { "name": "lat", "type": "string" },
+        { "name": "long", "type": "string" },
+        { "name": "marketId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createMarketTransaction",
+      "accounts": [
+        { "name": "marketTransaction", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "client", "type": "string" },
+        { "name": "orderId", "type": "string" },
+        { "name": "amount", "type": "string" },
+        { "name": "shippingPubk", "type": "string" },
+        { "name": "timestampVerify", "type": "string" },
+        { "name": "verify", "type": "string" },
+        { "name": "timestampDelivered", "type": "string" },
+        { "name": "delivered", "type": "string" },
+        { "name": "items", "type": "string" },
+        { "name": "marketTransactionId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createPost",
+      "accounts": [
+        { "name": "post", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "title", "type": "string" },
+        { "name": "image", "type": "string" },
+        { "name": "description", "type": "string" },
+        { "name": "price", "type": "string" },
+        { "name": "priceOffer", "type": "string" },
+        { "name": "available", "type": "string" },
+        { "name": "postId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createShipping",
+      "accounts": [
+        { "name": "shipping", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "label", "type": "string" },
+        { "name": "email", "type": "string" },
+        { "name": "street", "type": "string" },
+        { "name": "state", "type": "string" },
+        { "name": "colonia", "type": "string" },
+        { "name": "municipio", "type": "string" },
+        { "name": "zip", "type": "string" },
+        { "name": "numExt", "type": "string" },
+        { "name": "numInt", "type": "string" },
+        { "name": "numberPhone", "type": "string" },
+        { "name": "lat", "type": "string" },
+        { "name": "long", "type": "string" },
+        { "name": "shippingId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createTransaction",
+      "accounts": [
+        { "name": "transaction", "isMut": true, "isSigner": false },
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "tx", "type": "string" },
+        { "name": "rx", "type": "string" },
+        { "name": "amount", "type": "string" },
+        { "name": "shippingPubk", "type": "string" },
+        { "name": "timestampVerify", "type": "string" },
+        { "name": "verify", "type": "string" },
+        { "name": "timestampDelivered", "type": "string" },
+        { "name": "delivered", "type": "string" },
+        { "name": "items", "type": "string" },
+        { "name": "transactionId", "type": "u64" }
+      ]
+    },
+    {
+      "name": "createUser",
+      "accounts": [
+        { "name": "user", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true },
+        { "name": "rent", "isMut": false, "isSigner": false },
+        { "name": "systemProgram", "isMut": false, "isSigner": false }
+      ],
+      "args": [
+        { "name": "firstName", "type": "string" },
+        { "name": "secondName", "type": "string" },
+        { "name": "firstLastName", "type": "string" },
+        { "name": "secondLastName", "type": "string" },
+        { "name": "deviceId", "type": "string" }
+      ]
+    },
+    {
+      "name": "deleteMarket",
+      "accounts": [
+        { "name": "market", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "deletePost",
+      "accounts": [
+        { "name": "post", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "deleteShipping",
+      "accounts": [
+        { "name": "shipping", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": []
+    },
+    {
+      "name": "updateMarket",
+      "accounts": [
+        { "name": "market", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": [
+        { "name": "marketName", "type": "string" },
+        { "name": "marketFocusesOn", "type": "string" },
+        { "name": "marketAvailable", "type": "string" },
+        { "name": "email", "type": "string" },
+        { "name": "street", "type": "string" },
+        { "name": "state", "type": "string" },
+        { "name": "colonia", "type": "string" },
+        { "name": "municipio", "type": "string" },
+        { "name": "zip", "type": "string" },
+        { "name": "numExt", "type": "string" },
+        { "name": "numInt", "type": "string" },
+        { "name": "numberPhone", "type": "string" },
+        { "name": "lat", "type": "string" },
+        { "name": "long", "type": "string" }
+      ]
+    },
+    {
+      "name": "updateMarketTransaction",
+      "accounts": [
+        { "name": "marketTransaction", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": [
+        { "name": "timestampDelivered", "type": "string" },
+        { "name": "delivered", "type": "string" }
+      ]
+    },
+    {
+      "name": "updatePost",
+      "accounts": [
+        { "name": "post", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": [
+        { "name": "title", "type": "string" },
+        { "name": "image", "type": "string" },
+        { "name": "description", "type": "string" },
+        { "name": "price", "type": "string" },
+        { "name": "priceOffer", "type": "string" },
+        { "name": "available", "type": "string" }
+      ]
+    },
+    {
+      "name": "updateShipping",
+      "accounts": [
+        { "name": "shipping", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": [
+        { "name": "label", "type": "string" },
+        { "name": "email", "type": "string" },
+        { "name": "street", "type": "string" },
+        { "name": "state", "type": "string" },
+        { "name": "colonia", "type": "string" },
+        { "name": "municipio", "type": "string" },
+        { "name": "zip", "type": "string" },
+        { "name": "numExt", "type": "string" },
+        { "name": "numInt", "type": "string" },
+        { "name": "numberPhone", "type": "string" },
+        { "name": "lat", "type": "string" },
+        { "name": "long", "type": "string" }
+      ]
+    },
+    {
+      "name": "updateTransaction",
+      "accounts": [
+        { "name": "transaction", "isMut": true, "isSigner": false },
+        { "name": "owner", "isMut": true, "isSigner": true }
+      ],
+      "args": [
+        { "name": "timestampDelivered", "type": "string" },
+        { "name": "delivered", "type": "string" }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Balance",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "tp", "type": "string" },
+          { "name": "amount", "type": "string" },
+          { "name": "timestamp", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "Market",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "marketName", "type": "string" },
+          { "name": "marketFocusesOn", "type": "string" },
+          { "name": "marketAvailable", "type": "string" },
+          { "name": "email", "type": "string" },
+          { "name": "street", "type": "string" },
+          { "name": "state", "type": "string" },
+          { "name": "colonia", "type": "string" },
+          { "name": "municipio", "type": "string" },
+          { "name": "zip", "type": "string" },
+          { "name": "numExt", "type": "string" },
+          { "name": "numInt", "type": "string" },
+          { "name": "numberPhone", "type": "string" },
+          { "name": "lat", "type": "string" },
+          { "name": "long", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "MarketTransaction",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "client", "type": "string" },
+          { "name": "orderId", "type": "string" },
+          { "name": "amount", "type": "string" },
+          { "name": "shippingPubk", "type": "string" },
+          { "name": "timestampVerify", "type": "string" },
+          { "name": "verify", "type": "string" },
+          { "name": "timestampDelivered", "type": "string" },
+          { "name": "delivered", "type": "string" },
+          { "name": "items", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "Post",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "image", "type": "string" },
+          { "name": "title", "type": "string" },
+          { "name": "description", "type": "string" },
+          { "name": "price", "type": "string" },
+          { "name": "priceOffer", "type": "string" },
+          { "name": "available", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "Shipping",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "label", "type": "string" },
+          { "name": "email", "type": "string" },
+          { "name": "street", "type": "string" },
+          { "name": "state", "type": "string" },
+          { "name": "colonia", "type": "string" },
+          { "name": "municipio", "type": "string" },
+          { "name": "zip", "type": "string" },
+          { "name": "numExt", "type": "string" },
+          { "name": "numInt", "type": "string" },
+          { "name": "numberPhone", "type": "string" },
+          { "name": "lat", "type": "string" },
+          { "name": "long", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "Transaction",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "id", "type": "u64" },
+          { "name": "tx", "type": "string" },
+          { "name": "rx", "type": "string" },
+          { "name": "amount", "type": "string" },
+          { "name": "shippingPubk", "type": "string" },
+          { "name": "timestampVerify", "type": "string" },
+          { "name": "verify", "type": "string" },
+          { "name": "timestampDelivered", "type": "string" },
+          { "name": "delivered", "type": "string" },
+          { "name": "items", "type": "string" }
+        ]
+      }
+    },
+    {
+      "name": "User",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          { "name": "owner", "type": "publicKey" },
+          { "name": "firstName", "type": "string" },
+          { "name": "secondName", "type": "string" },
+          { "name": "firstLastName", "type": "string" },
+          { "name": "secondLastName", "type": "string" },
+          { "name": "deviceId", "type": "string" },
+          { "name": "lastPostId", "type": "u64" },
+          { "name": "lastMarketId", "type": "u64" },
+          { "name": "lastShippingId", "type": "u64" },
+          { "name": "lastTransactionId", "type": "u64" },
+          { "name": "lastMarketTransactionId", "type": "u64" },
+          { "name": "lastBalanceId", "type": "u64" }
+        ]
+      }
+    }
+  ],
+  "events": [
+    {
+      "name": "DeleteMarketEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "DeletePostEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "DeleteShippingEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewBalanceEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewMarketEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewMarketTransactionEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewPostEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewShippingEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "NewTransactionEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "UpdateMarketEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "UpdateMarketTransactionEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "UpdatePostEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "UpdateShippingEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    },
+    {
+      "name": "UpdateTransactionEvent",
+      "fields": [
+        { "name": "owner", "type": "publicKey", "index": false },
+        { "name": "id", "type": "u64", "index": false }
+      ]
+    }
+  ]
+}

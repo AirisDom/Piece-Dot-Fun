@@ -1,0 +1,154 @@
+@import "@/scss/colors.scss";
+
+
+.title {
+  //text-align: center;
+  background-color: $main-color;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+  //border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 1.25rem;
+  font-weight: bold;
+}
+
+.summary_cart {
+  text-align: center;
+  //background-color: aqua;
+  margin: 2.5%;
+  //max-width: 1000px;
+  //margin: 0 auto;
+}
+
+.summary_cart_data {
+  text-align: center;
+  //background-color: #7a09ca;
+  //box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  //min-width: 800px;
+}
+
+.summary_cart_table{
+  //background-color: #ff0000;
+  text-align: center;
+  //width: 100%;
+  margin-top: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 1px;
+  color: #e0e0e0;
+  
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.summary_cart_product {
+  padding: 0 20px;
+  td {
+    text-align: center;
+    padding: 0 30px;
+    margin: 20px 0px;
+  }
+}
+.summary_cart_resume {
+  td {
+    &:last-of-type {
+      text-align: center !important;
+    }
+  }
+}
+
+.total_price {
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 10px;
+  &:hover{
+    color: #0ece00;
+  }
+}
+
+.summary_cart_actions {
+  display: flex;
+  svg {
+    margin-right: 5px;
+  }
+}
+
+.summary_cart_selector_wrapper {
+  padding-top: 5px;
+  text-align: center;
+  select {
+    padding: 10px;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    background-color: $main-color;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: #d7d7d7;
+    //border-radius: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-weight: bold;
+    //outline: 0;
+    text-emphasis-color: blue;
+
+    &:hover{
+      color: #ffffff;
+      cursor: pointer;
+      border-color: #ee00ff;
+    }
+  }
+}
+
+.shippigCart_wrapper{
+  text-align: center;
+  //width: 100%;
+  margin-top: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border: solid 1px;
+  color: #c0becb;
+  //object-fit: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  padding: 15px 15px;
+
+
+  div{
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+   }
+}
+.shippigCart_pay_wrapper{
+  font-size: 20px;
+  font-weight: 550;
+  color: #c0becb;
+  margin-top: 45px;
+}
+.shippigCart_pay{
+  display: flex;
+  margin: auto;
+  max-width: 300px;
+  padding: 15px;
+  background-color: #512da8;
+  color: white;
+  border-radius: 15px;
+  &:hover{
+    border-color: aliceblue;
+    background-color: #d716e5;
+    transition: 1.1s;
+    cursor: pointer;
+  }
+  a {
+    margin: auto;
+  }
+}

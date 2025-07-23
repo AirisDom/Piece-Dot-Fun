@@ -1,0 +1,41 @@
+@import "scss/colors.scss";
+
+.header_profile_click {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 25px;
+  padding: 10px 40px;
+
+  border: 1px solid $nav-color;
+  border-radius: 10px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.header_profile {
+  height: 5rem /* 80px */;
+  width: 5rem /* 80px */;
+  background-color: rgb(1, 10, 80);
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.header_profile img {
+  height: 100%;
+  width: 100%;
+  border-radius: 9999px;
+  object-fit: cover;
+}
+
+.header_profile_wallet {
+  font-weight: 600;
+  padding: 10%;
+  p {
+    color: $nav-color;
+  }
+}
