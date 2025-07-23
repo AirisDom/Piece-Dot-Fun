@@ -1,50 +1,35 @@
 import { useRouter } from "next/router";
 import MarketFoot from "../MarketFoot/MarketFoot";
 import ItemHeader from "../ItemHeader";
-
 import styles from "../../FeedItem.module.scss";
 
-export default function FeedMarket(props) {
-  const { avatar, data, key } = props;
-  console.log("dataaa owner", data.owner.toString());
-  const user = data.owner.toString();
+export default function FeedMarket({ avatar, data }) {
   const router = useRouter();
-  console.log("key", key);
-  if (data.id.toString() == "1") {
-    console.log("key unique", data.id.toString());
-  } else console.log("key multi", data.id.toString());
+  // Add new fields to the market data (for demo, fallback if not present)
+  const market = {
+    ...data,
+    createdAt: data.createdAt || new Date().toISOString(),
+    rating: data.rating || Math.round(Math.random() * 5 * 10) / 10, // 0-5, 1 decimal
+  };
   const handleRedirect = () => {
-    const marketUrl = `/market/${data.owner.toString()}`;
+    const marketUrl = `/market/${market.owner.toString()}`;
     router.push(marketUrl);
   };
-
   return (
     <div
       className={styles.feedItem_wrapper}
       onClick={
-        data.marketAvailable == "1"
+        market.marketAvailable == "1"
           ? handleRedirect
-          : console.log("Mercado no disponibe")
+          : () => console.log("Market not available")
       }
     >
-      <ItemHeader avatar={avatar} userAddress={user} title={data.marketName} />
-
-      <MarketFoot
-        marketName={data.marketName}
-        marketFocusesOn={data.marketFocusesOn}
-        email={data.email}
-        state={data.state}
-        marketAvailable={data.marketAvailable}
-        municipio={data.municipio}
-        colonia={data.colonia}
-        zip={data.zip}
-        numExt={data.numExt}
-        numInt={data.numInt}
-        numberPhone={data.numberPhone}
-        lat={data.lat}
-        long={data.long}
-        market_id
+      <ItemHeader
+        avatar={avatar}
+        userAddress={market.owner}
+        title={market.marketName}
       />
+      <MarketFoot market={market} />
     </div>
   );
 }
