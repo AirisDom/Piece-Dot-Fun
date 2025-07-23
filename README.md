@@ -59,8 +59,9 @@ Reparar vulnerabilidades
 - Facebook Images
   scontent-qro1-2.xx.fbcdn.net
 
-
 # Stripe
+
 ## env.local
-Crear un archivo llamado ".env.local" en raiz y agregar las variables
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY y STRIPE_SECRET_KEY con los valores que da el dashboard de Stripe
+
+Create a file named ".env.local" in the root directory and add the variables
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY and STRIPE_SECRET_KEY with the values provided by the Stripe dashboard
